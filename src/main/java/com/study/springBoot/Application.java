@@ -2,6 +2,7 @@ package com.study.springBoot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 // 스프링 부트의 자동설정. 항상 프로젝트의 최상단에 위치해야함.
 
@@ -12,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
+@EnableJpaAuditing // Jpa Auditing 활성화
 public class Application {
     public static void main(String[] args) {
         /**

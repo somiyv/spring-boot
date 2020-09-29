@@ -1,5 +1,6 @@
 package com.study.springBoot.domain.posts;
 
+import com.study.springBoot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,7 @@ import javax.persistence.*;
 @Getter // entity 클래스 에서는 setter를 만들지 않는다. -> 언제 어떻게 변경되는지 구분할 수 없어 복잡해 질 수 있음.
 @NoArgsConstructor
 @Entity // 기본값으로 클래스의 카멜케이스 이름을 언더스코어 네이밍으로 테이블 이름을 매칭한다.
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id // 해당 테이블의 pk
     @GeneratedValue(strategy = GenerationType.IDENTITY) // pk생성규칙. 이 옵션을 추가해야만 auto_increment가 된다.
@@ -29,5 +30,10 @@ public class Posts {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
 }
