@@ -4,3 +4,7 @@
 spring-boot.iml
 src/test/resources/
 application-oauth.properties
+out/production/classes/
+out/production/resources/application.properties
+out/production/resources/static/
+out/production/resources/templates/
