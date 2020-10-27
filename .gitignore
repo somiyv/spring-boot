@@ -2,3 +2,5 @@
 .gradle
 .idea
 spring-boot.iml
+src/test/resources/
+application-oauth.properties
